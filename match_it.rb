@@ -4,7 +4,7 @@ def recursive_match_it(string)
   if string.empty?
     return true
   else
-    return false if !string.include? MATCHED_PAIR
+    return false if !string.include? MATCHED_PAIR || string.size.odd?
   end
   match_it string.tr(MATCHED_PAIR, "")
 end
